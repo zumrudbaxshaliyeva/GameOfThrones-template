@@ -12,13 +12,30 @@ h_icon.addEventListener("click",()=>{
 });
 
  //Modal view
+
+
+ const s_btn= document.getElementById("sign-btn");
+ const s_modal =document.getElementById('modal-content');
+ const s_closebtn =document.getElementById('close');
+
  const w_button= document.querySelector(".watch-btn");
  const w_modal =document.querySelector('.watch1-box');
  const w_clsbtn =document.querySelector('.close_watch');
+//open modal
+s_btn.addEventListener('click', function() {
+  s_modal.style.display = 'flex';
+});
+//close modal
+s_closebtn.addEventListener('click', function() {
+  s_modal.style.display = 'none';
+});
 
- const s_btn= document.querySelector(".sign-btn");
- const s_modal =document.querySelector('#modal-content');
- const s_clsbtn =document.querySelector('#close');
+// outside click
+s_modal.addEventListener('click', function(event) {
+  if (event.target === s_modal) {
+    s_modal.style.display = 'none';
+  }
+});
 
 
     w_button.addEventListener("click",
@@ -35,17 +52,7 @@ h_icon.addEventListener("click",()=>{
 
 
 
-    s_btn.addEventListener("click",
-    ()=>{
-    s_modal.style.display ='block';
-    s_btn.classList.add('active');  
-    });
-
-    s_clsbtn.addEventListener('click',
-    ()=>{
-    s_modal.style.display="none";
-    s_btn.classList.remove('active');
-    });
+    
 
     window.addEventListener("click",
     (event)=> {

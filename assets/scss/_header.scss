@@ -1,11 +1,12 @@
 header {
+  height: 33rem;
+  width: 100%;
   position: relative;
   background-image: url("../img/Back-Images.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 33rem;
-  width: 100%;
+
   padding-top: 4rem;
   margin-bottom: 4rem;
 
@@ -97,10 +98,11 @@ header {
 
             p {
               @include header-font;
-              margin-bottom: 0;
-              padding: 10px 25px;
               display: flex;
               align-items: center;
+              margin-bottom: 0;
+              padding: 10px 25px;
+             
             }
           }
         }
@@ -117,14 +119,16 @@ header {
     .watch1-box {
       display: none;
       flex-direction: column;
-      align-items: end;
       transform: translate(-12%, -11%);
+      align-items: end;
+    
 
       .close-icon {
-        border: 1px solid rgba(15, 247, 240, 0.4);
-        border-radius: 100%;
+       
         width: 1.9rem;
         height: 1.9rem;
+        border: 1px solid rgba(15, 247, 240, 0.4);
+        border-radius: 100%;
         @include display;
         transform: translate(10px, 10px);
         font-size: 12px;
@@ -240,24 +244,28 @@ header {
         background: black;
         z-index: 5;
         transition: 1s all ease;
-
-        .logo-mobile {
-          display: flex !important;
-          padding: 3rem 2.5rem;
-        }
-
         nav {
           background: transparent !important;
           height: 100% !important;
           border: none !important;
         }
+        .logo-mobile {
+          display: flex !important;
+          padding: 3rem 2.5rem;
+        }
+
+       
 
         .menu-list {
+          height: 100%;
           display: flex;
           flex-direction: column;
-          height: 100%;
+         
           align-items: flex-start !important;
-
+          .hamburger-icon {
+            display: flex !important;
+            margin-left: auto;
+          }
           .dropdown {
             margin-top: auto;
           }
@@ -268,10 +276,7 @@ header {
         display: none !important;
       }
 
-      .hamburger-icon {
-        display: flex !important;
-        margin-left: auto;
-      }
+     
     }
   }
 }

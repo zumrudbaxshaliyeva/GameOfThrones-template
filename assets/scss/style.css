@@ -1,14 +1,4 @@
-header {
-  position: relative;
-  background-image: url("../img/Back-Images.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 33rem;
-  width: 100%;
-  padding-top: 4rem;
-  margin-bottom: 4rem;
-}
+
 .sign-in-part1 .content {
   display: none;
   position: fixed;
@@ -380,7 +370,18 @@ body {
 
 .main {
   background-color: #1f1f1f;
-}/*# sourceMappingURL=style.css.map */
+}
+header {
+  position: relative;
+  background-image: url("../img/bg-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 33rem;
+  width: 100%;
+  padding-top: 4rem;
+  margin-bottom: 4rem;
+}
 header .main-top .container {
   display: flex;
   align-items: center;

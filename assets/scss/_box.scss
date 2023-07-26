@@ -12,22 +12,23 @@
 
 
     .swiper-container{
-        width: 100%;
-        overflow: visible;
+      width: 100%;
+      overflow: visible;
 
-    }
-   .swiper-swiper-slide{
+  }
+
+
+  .swiper-swiper-slide:hover{
+      z-index: 1;
+  }
+  .swiper-swiper-slide{
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: visible;
    }
-
-    .swiper-swiper-slide:hover{
-        z-index: 1;
-    }
-    
+  
     .card {
       width: 100%;
       height: 100%;
