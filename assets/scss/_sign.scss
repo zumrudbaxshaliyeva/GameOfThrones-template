@@ -14,7 +14,7 @@
     background: rgba(22, 22, 22, 0.7);
     display: none;
     position: fixed;
-    z-index: 11;
+    z-index: 50;
     top: 0;
     height: 100%;
     width: 100%;
@@ -22,7 +22,7 @@
    
 
     .row {
-      @include display;
+      @include center;
       height: 100vh;
       padding: 32px 0;
 
@@ -45,7 +45,7 @@
             @include bg2;
 
             i {
-              @include display;
+              @include center;
               width: 100%;
               font-size: 2rem;
             }
@@ -163,7 +163,7 @@
 }
 
 
-@media screen  and (max-width:468px){
+@media screen  and (max-width:470px){
     
   
 
