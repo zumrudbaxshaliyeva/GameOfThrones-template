@@ -1,0 +1,206 @@
+.section-part2,
+.section-part3 {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0;
+
+  .container {
+    @include display;
+    width: 100%;
+    max-width: 91%;
+    margin: auto;
+
+
+    .swiper-container{
+        width: 100%;
+        overflow: visible;
+
+    }
+   .swiper-swiper-slide{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+   }
+
+    .swiper-swiper-slide:hover{
+        z-index: 1;
+    }
+    
+    .card {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      color: $text-color;
+      border: none;
+      transition: all 1s;
+      position: relative;
+
+      &:hover {
+        transform: scale(1.2) translateY(-15%);
+        border: 1px solid red;
+        border-radius: 8px;
+        z-index: 99 !important;
+        transition: all 1s;
+        @include bg22;
+
+        .card-body {
+          padding-left: 1rem;
+
+          .icon-list {
+            display: flex;
+          }
+
+          .info-part {
+            .card-text {
+              display: flex;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      .image {
+        img {
+          border-radius: 8px;
+        }
+      }
+
+      .card-body {
+        padding-left: 0;
+
+        .info-part {
+          display: flex;
+          justify-content: space-between;
+
+          .card-title {
+            font-family: $font-family1;
+            font-size: 14px;
+            margin-bottom: 0;
+          }
+          .card-text {
+            font-family: $font-family2;
+            font-size: 12px;
+            display: none;
+          }
+        }
+
+        .icon-list {
+          display: none;
+          justify-content: center;
+          margin-top: 4rem;
+          align-items: center;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            width: 3.4rem;
+            height: 3.4rem;
+            border: 1px solid rgba(15, 247, 240, 0.4);
+            border-radius: 100%;
+            @include bg22;
+
+            &:nth-child(2) {
+              background: radial-gradient(
+                100% 100% at 0% 0%,
+                #0cf9f0 0%,
+                #d686ff 100%
+              ) !important;
+              box-shadow: inset -2.53935px -2.53935px 126.967px
+                rgba(255, 255, 255, 0.02) !important;
+              backdrop-filter: blur(5.25px) !important;
+              width: 42px;
+              height: 42px;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 7rem !important;
+  height: 7rem !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff !important;
+  text-align: center;
+  border-radius: 100%;
+
+  &::after {
+    content: "";
+    font-size: 3rem !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section-part2,
+  .section-part3 {
+    .container {
+      max-width: 95%;
+      margin: auto;
+
+      .card {
+        .card-body {
+          padding: 1rem;
+
+          .info-part {
+            .card-title {
+              font-size: 1.2rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .section-part2,
+  .section-part3 {
+    .container {
+      max-width: 90%;
+      margin: auto;
+
+      .card {
+        .card-body {
+          padding: 1rem;
+
+          .info-part {
+            display: block;
+
+            .card-title {
+              font-size: 0.7rem !important;
+            }
+            .card-text {
+              font-size: 1rem !important;
+            }
+          }
+
+          .icon-list {
+            margin-top: 2rem;
+
+            span {
+              width: 2.5rem;
+              height: 2.5rem;
+              &:nth-child(2) {
+                width: 3rem;
+                height: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}

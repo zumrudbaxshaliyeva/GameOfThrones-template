@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixin";
+@import "header";
+@import "sign";
+@import "box";
+@import "reset";
+
+html{
+    font-size: 10px;
+    overflow-x: hidden !important;
+}
+body{
+    overflow-x: hidden!important;
+}
+
+.main{
+    background-color: #1f1f1f;
+}
+

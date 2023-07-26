@@ -1,0 +1,277 @@
+header {
+  position: relative;
+  background-image: url("../img/Back-Images.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 33rem;
+  width: 100%;
+  padding-top: 4rem;
+  margin-bottom: 4rem;
+
+  .main-top {
+    .container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .main-menu {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .logo,
+        .logo-mobile {
+          margin-right: 5rem;
+
+          a {
+            font-family: $font-family1;
+            color: $text-color;
+            font-size: 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+          }
+        }
+
+        .navigation {
+          .logo-mobile {
+            display: none;
+          }
+          nav {
+            @include bg;
+
+            .menu-list {
+              display: flex;
+              align-items: center;
+              list-style: none;
+              margin-bottom: 0;
+              padding-left: 0;
+
+              li {
+                padding: 1rem 2.5rem;
+
+                a {
+                  text-decoration: none;
+                  @include header-font;
+
+                  &:hover {
+                    background: none;
+                  }
+                }
+              }
+
+              .dropdown-menu {
+                @include bg;
+                min-width: auto;
+
+                li {
+                  padding: 5px 25px;
+                }
+              }
+            }
+          }
+        }
+
+        .button-group {
+          display: flex;
+
+          .active {
+            @include bg2;
+
+            p {
+              &::after {
+                content: "";
+                display: flex;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 100%;
+                background: red;
+                margin-left: 1.5rem;
+              }
+            }
+          }
+
+          button {
+            outline: none;
+            @include bg;
+
+            p {
+              @include header-font;
+              margin-bottom: 0;
+              padding: 10px 25px;
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+        .hamburger-icon {
+          color: white;
+          font-size: 2.5rem;
+          display: none;
+        }
+      }
+    }
+  }
+
+  .main-bottom {
+    .watch1-box {
+      display: none;
+      flex-direction: column;
+      align-items: end;
+      transform: translate(-12%, -11%);
+
+      .close-icon {
+        border: 1px solid rgba(15, 247, 240, 0.4);
+        border-radius: 100%;
+        width: 1.9rem;
+        height: 1.9rem;
+        @include display;
+        transform: translate(10px, 10px);
+        font-size: 12px;
+        color: $text-color;
+        @include bg2;
+        z-index: 6;
+      }
+
+      .content {
+        border: 1px solid rgba(15, 247, 240, 0.4);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        @include bg2;
+
+        .all-card {
+          width: 240px;
+
+          .mini-card {
+            display: flex;
+            background: rgba(31, 31, 31, 1);
+            color: $text-color;
+            margin: 1rem;
+            border-radius: 3px;
+            align-items: center;
+
+            .image-box {
+              img {
+                border-radius: 3px 0 0 3px;
+              }
+            }
+            .text {
+              display: flex;
+              width: 100%;
+              font-size: 9px;
+              padding-left: 10px;
+
+              p {
+                margin-bottom: 0;
+              }
+            }
+            .icon {
+              display: flex;
+              justify-content: end;
+              font-size: 9px;
+              padding-right: 10px;
+            }
+          }
+        }
+
+        .line {
+          width: 5px;
+          height: 17.9rem;
+          border-radius: 10px;
+          @include bg2;
+
+          .circle {
+            width: 1.5rem;
+            height: 1.5rem;
+            @include bg3;
+            border-radius: 100%;
+            position: absolute;
+            bottom: 4.5rem;
+            right: -5px;
+          }
+        }
+      }
+    }
+
+    .volume-icon {
+      display: inline-flex;
+      width: 4.2rem;
+      height: 4.2rem;
+      @include bg;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      right: 8%;
+      align-items: center;
+      justify-content: center;
+      color: $text-color;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .main-menu {
+      position: fixed;
+      width: 100%;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      @include display;
+      max-width: 92%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .navigation {
+        display: none;
+      }
+
+      .navigation-mobile {
+        display: flex;
+        flex-direction: column !important;
+        height: 100%;
+        width: 26rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: black;
+        z-index: 5;
+        transition: 1s all ease;
+
+        .logo-mobile {
+          display: flex !important;
+          padding: 3rem 2.5rem;
+        }
+
+        nav {
+          background: transparent !important;
+          height: 100% !important;
+          border: none !important;
+        }
+
+        .menu-list {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          align-items: flex-start !important;
+
+          .dropdown {
+            margin-top: auto;
+          }
+        }
+      }
+
+      .button-group {
+        display: none !important;
+      }
+
+      .hamburger-icon {
+        display: flex !important;
+        margin-left: auto;
+      }
+    }
+  }
+}

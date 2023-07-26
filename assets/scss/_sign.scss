@@ -1,0 +1,169 @@
+.sign-in-part1 {
+  .content {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 11;
+    background: rgba(22, 22, 22, 0.7);
+
+    .row {
+      @include display;
+      height: 100vh;
+      padding: 2rem 0;
+
+      .form-part {
+        @include bg2;
+        border-radius: 3rem;
+        width: 100%;
+        color: $text-color;
+
+        .close-part {
+          display: flex;
+          justify-content: end;
+          transform: translate(20px, -15px);
+          span {
+            display: flex;
+            border-radius: 100%;
+            width: 4.3rem;
+            height: 4.3rem;
+            border: 1px solid rgba(15, 247, 240, 0.4);
+            @include bg2;
+
+            i {
+              @include display;
+              width: 100%;
+              font-size: 2rem;
+            }
+          }
+        }
+
+        .head-part {
+          text-align: center;
+          font-family: $font-family1;
+          h1,
+          p {
+            margin-bottom: 2rem;
+            font-weight: 700;
+          }
+          h1 {
+            font-size: 3rem;
+          }
+
+          p {
+            font-size: 1.8rem;
+          }
+        }
+
+        form {
+          width: 100%;
+          padding: 0 5rem;
+
+          .form-input {
+            width: 100%;
+
+            label {
+              margin: 5px 0;
+              font-family: $font-family1;
+              font-size: 14px;
+              font-weight: 600;
+            }
+
+            input {
+              width: 100%;
+              height: 5.2rem;
+              background: #0d0d0d;
+              border-radius: 8px;
+              outline: none;
+              border: 1px solid rgba(15, 247, 240, 0.4);
+              padding-left: 4rem;
+              margin: 5px 0;
+              @include header_font_catagory;
+            }
+          }
+
+          .forget-password{
+            display: flex;
+            justify-content: end;
+
+            a {
+              @include header_font_catagory;
+              text-decoration: none;
+              font-size: 1.2rem;
+            }
+          }
+
+          .sign-button-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+
+            .sign-up-btn {
+              display: flex;
+              align-items: center;
+
+              button {
+                border: none;
+                background: none;
+                @include header_font_catagory;
+                font-size: 1.2rem;
+                transition: all 1s ease;
+              }
+            }
+
+            .sign-in-btn {
+              button {
+                border-radius: 5.5rem;
+                @include bg2;
+                @include header_font_catagory;
+                font-size: 1.6rem;
+                width: 17rem;
+                height: 5rem;
+                border: 1px solid rgba(15, 247, 240, 0.4);
+              }
+            }
+          }
+        }
+
+        .foot-part {
+          text-align: center;
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 1.2rem;
+          font-family: $font-family2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 8rem;
+          width: 100%;
+
+          a {
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen  and (max-width:468px){
+    
+    .close-part{
+        span{
+            width: 3.5rem !important;
+            height: 3.5rem !important;
+        }
+    }
+
+    .sign-in-btn{
+        button{
+            width: 16rem !important;
+            font-size: 1.5rem !important;
+        }
+    }
+
+    form{
+        padding: 0 4rem !important;
+    }
+}
